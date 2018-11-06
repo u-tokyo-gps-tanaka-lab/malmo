@@ -164,6 +164,7 @@ namespace malmo
             const boost::shared_ptr<MissionInitSpec> getMissionInit() const;
 
             friend std::ostream& operator<<(std::ostream& os, const AgentHost& ah);
+            void close();
         private:
 
             static void testSchemasCompatible();
@@ -188,7 +189,6 @@ namespace malmo
             
             void openCommandsConnection();
 
-            void close();
             void closeServers();
             void closeRecording();
             

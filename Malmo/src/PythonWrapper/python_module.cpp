@@ -229,6 +229,7 @@ BOOST_PYTHON_MODULE(MalmoPython)
         .def( "sendCommand",                    sendCommandWithKey )
         .def("getRecordingTemporaryDirectory",  &AgentHost::getRecordingTemporaryDirectory)
         .def( "setDebugOutput",                 &AgentHost::setDebugOutput )
+        .def( "close",                 &AgentHost::close )
         .def(self_ns::str(self_ns::self))
     ;
 #ifdef WRAP_ALE
